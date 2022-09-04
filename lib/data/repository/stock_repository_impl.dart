@@ -37,7 +37,7 @@ class StockRepositoryImpl implements StockRepository {
       // 캐시 비우기
       await _dao.clearCompanyListings();
 
-      // 캐싱 추가
+      // 캐시 추가
       await _dao.insertCompanyListings(
           remoteListings.map((e) => e.toCompanyListingEntity()).toList());
 
