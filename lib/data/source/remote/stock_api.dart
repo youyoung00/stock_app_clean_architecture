@@ -3,12 +3,13 @@ import 'package:http/http.dart' as http;
 class StockApi {
   static const baseUrl = 'https://www.alphavantage.co/';
   static const apiKey = 'RWIOL917HECF917T';
-  final http.Client client;
 
-  StockApi(this.client);
+  final http.Client _client;
+
+  StockApi({http.Client? client}) : _client = (client ?? http.Client());
 
   Future<http.Response> getListings({String apiKey = apiKey}) async {
-    return await client.get(Uri.parse(
+    return await _client.get(Uri.parse(
         'https://www.alphavantage.co/query?function=LISTING_STATUS&apikey=$apiKey'));
   }
 }
