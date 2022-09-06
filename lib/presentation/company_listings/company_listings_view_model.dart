@@ -43,16 +43,16 @@ class CompanyListingsViewModel with ChangeNotifier {
 
     result.when(
       success: (listings) {
-        print('CompanyListingsViewModel 1 : $result');
+        // print('CompanyListingsViewModel 1 : $result');
         _state = state.copyWith(
           companies: listings,
         );
-        print('CompanyListingsViewModel 1-2 : $result');
+        // print('CompanyListingsViewModel 1-2 : $result');
       },
       error: (e) {
-        print('CompanyListingsViewModel 2 : $result');
+        // print('CompanyListingsViewModel 2 : $result');
         // TODO : 에러처리
-        print('리모트 에러 ' + e.toString());
+        print('리모트 에러 : $e');
       },
     );
 
