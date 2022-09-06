@@ -47,6 +47,7 @@ class CompanyInfoScreen extends StatelessWidget {
               fontStyle: FontStyle.italic,
             ),
           ),
+          const Divider(),
           Text(
             'Industry: ${companyInfo.industry}',
             style: const TextStyle(
