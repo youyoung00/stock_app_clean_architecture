@@ -13,6 +13,6 @@ class CompanyListingsState with _$CompanyListingsState {
     @Default('') String searchQuery,
   }) = _CompanyListingsState;
 
-  factory CompanyListingsState.fromJson(Map<String, dynamic> json) =>
+  factory CompanyListingsState.fromJson(Map<String, Object?> json) =>
       _$CompanyListingsStateFromJson(json);
 }

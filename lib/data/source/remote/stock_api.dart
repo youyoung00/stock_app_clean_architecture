@@ -9,7 +9,16 @@ class StockApi {
   StockApi({http.Client? client}) : _client = (client ?? http.Client());
 
   Future<http.Response> getListings({String apiKey = apiKey}) async {
-    return await _client.get(Uri.parse(
+    final result = await _client.get(Uri.parse(
         'https://www.alphavantage.co/query?function=LISTING_STATUS&apikey=$apiKey'));
+
+    print(result.body.length);
+    print(result.body);
+    print(result.body);
+    print(result.body.length);
+
+    return result;
+
+    // 'https://www.alphavantage.co/query?function=LISTING_STATUS&apikey=RWIOL917HECF917T'));
   }
 }
